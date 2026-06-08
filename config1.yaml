@@ -1,0 +1,75 @@
+theme:
+  # ── Couleurs ────────────────────────────────────────────────────
+  primary_color:        "#1A3A2A"      # vert très foncé, textes titres
+  secondary_color:      "#F7F9F8"      # fond slide, blanc cassé chaud
+  accent_color:         "#EAF4EE"      # fond blocs équations/citations
+  header_bg:            "#1A3A2A"      # barre titre (vert profond)
+  header_text:          "#FFFFFF"
+  header_accent_line:   "#52B788"      # liseré bas du header (vert vif)
+  footer_bg:            "#1A3A2A"
+  code_bg_color:        "#0D1F17"      # fond code (vert nuit)
+  code_text_color:      "#95D5B2"      # texte code (vert clair doux)
+  code_keyword_color:   "#52B788"
+  inline_code_bg:       "#D8EDDF"
+  inline_code_color:    "#1A3A2A"
+  caption_color:        "#7A8C82"
+  link_color:           "#2D6A4F"
+  border_color:         "#B7DEC8"
+  blockquote_bg:        "#EAF4EE"
+  blockquote_border:    "#52B788"
+  table_header_bg:      "#2D6A4F"
+  table_row_alt:        "#F0F8F3"
+  bullet_color:         "#52B788"
+
+  # ── Typographie ─────────────────────────────────────────────────
+  font:                 "Georgia, 'Times New Roman', serif"   # corps élégant
+  font_heading:         "'Trebuchet MS', Helvetica, sans-serif"
+  code_font:            "'Courier New', Courier, monospace"
+
+  font_size_h1:         36            # px — titre slide
+  font_size_h2:         22
+  font_size_h3:         17
+  font_size_body:       15
+  font_size_list:       14
+  font_size_code:       12
+  font_size_caption:    11
+  font_size_slide_number: 11
+  font_size_blockquote: 14
+  font_size_table:      13
+
+  line_height_body:     1.75
+  line_height_list:     1.85
+  line_height_code:     1.55
+
+  # ── Dimensions ──────────────────────────────────────────────────
+  slide_width:          "297mm"
+  slide_height:         "210mm"
+  slide_padding:        "18px 38px 14px"   # header/body gérés séparément
+
+  # ── Header ──────────────────────────────────────────────────────
+  header_padding:       "14px 36px 12px"
+  header_accent_height: "4px"              # liseré coloré sous le header
+
+  # ── Bordures & rayons ───────────────────────────────────────────
+  border_radius_block:  "8px"
+  border_radius_table:  "8px"
+  blockquote_border_width: "5px"
+  h2_border_width:      "2px"
+
+  # ── Blocs code ──────────────────────────────────────────────────
+  code_padding:         "14px 18px"
+  code_border_radius:   "8px"
+  code_lang_color:      "#52B788"
+
+  # ── Images ──────────────────────────────────────────────────────
+  image_max_width:      "78%"
+  image_max_height:     "120mm"
+  image_border_radius:  "6px"
+
+  # ── Footer / numérotation ───────────────────────────────────────
+  slide_numbering:      true
+  slide_number_opacity: 0.7
+  footer_height:        "28px"
+
+  # ── Moteur PDF ──────────────────────────────────────────────────
+  pdf_engine:           "weasyprint"
