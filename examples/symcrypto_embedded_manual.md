@@ -26,6 +26,91 @@ You will learn, in order:
 
 Each chapter teaches one thing. Each principle crystallizes a lesson. Read the manual once for orientation, return to individual chapters as reference.
 
+---
+
+## Table of Contents
+
+- [Symmetric Cryptography for Embedded Devices](#symmetric-cryptography-for-embedded-devices)
+    - [A First-Principles Manual for the Cyber Embedded Architect](#a-first-principles-manual-for-the-cyber-embedded-architect)
+  - [Preface](#preface)
+  - [Table of Contents](#table-of-contents)
+- [Part I — Orientation](#part-i--orientation)
+  - [Chapter 1 — The Duality: Secrecy vs Authenticity](#chapter-1--the-duality-secrecy-vs-authenticity)
+  - [Chapter 2 — The Threat Model for Embedded Systems](#chapter-2--the-threat-model-for-embedded-systems)
+  - [Chapter 3 — The N Doors: Primitive Categories](#chapter-3--the-n-doors-primitive-categories)
+  - [Chapter 4 — The Constraint Triad](#chapter-4--the-constraint-triad)
+- [Part II — Anatomy](#part-ii--anatomy)
+  - [Chapter 5 — Block Ciphers](#chapter-5--block-ciphers)
+  - [Chapter 6 — Stream Ciphers](#chapter-6--stream-ciphers)
+  - [Chapter 7 — Message Authentication Codes](#chapter-7--message-authentication-codes)
+  - [Chapter 8 — Authenticated Encryption with Associated Data](#chapter-8--authenticated-encryption-with-associated-data)
+  - [Chapter 9 — Hash Functions in Symmetric Context](#chapter-9--hash-functions-in-symmetric-context)
+  - [Chapter 10 — Block Ciphers vs Stream Ciphers](#chapter-10--block-ciphers-vs-stream-ciphers)
+  - [Chapter 11 — Encryption vs Authentication: The Dangerous Conflation](#chapter-11--encryption-vs-authentication-the-dangerous-conflation)
+- [Part III — Configuration and Composition](#part-iii--configuration-and-composition)
+  - [Chapter 12 — Keys: Sizes, Types, and Lifetimes](#chapter-12--keys-sizes-types-and-lifetimes)
+  - [Chapter 13 — Nonces and IVs](#chapter-13--nonces-and-ivs)
+  - [Chapter 14 — Modes of Operation: The Universal Wrapper](#chapter-14--modes-of-operation-the-universal-wrapper)
+  - [Chapter 15 — ECB, CBC, CTR: The Three Foundational Modes](#chapter-15--ecb-cbc-ctr-the-three-foundational-modes)
+  - [Chapter 16 — GCM and CCM: AEAD Modes in Practice](#chapter-16--gcm-and-ccm-aead-modes-in-practice)
+  - [Chapter 17 — Padding and Padding Oracles](#chapter-17--padding-and-padding-oracles)
+- [Part IV — Mechanism and Internals](#part-iv--mechanism-and-internals)
+  - [Chapter 18 — Inside AES: The Four Operations](#chapter-18--inside-aes-the-four-operations)
+  - [Chapter 19 — The AES Key Schedule](#chapter-19--the-aes-key-schedule)
+  - [Chapter 20 — Inside ChaCha20: The Quarter-Round](#chapter-20--inside-chacha20-the-quarter-round)
+  - [Chapter 21 — GHASH: Polynomial MAC over GF(2¹²⁸)](#chapter-21--ghash-polynomial-mac-over-gf2)
+  - [Chapter 22 — CMAC and HMAC Internals](#chapter-22--cmac-and-hmac-internals)
+  - [Chapter 23 — Why AES-128 Is Still Safe](#chapter-23--why-aes-128-is-still-safe)
+- [Part V — Embedded Hardware](#part-v--embedded-hardware)
+  - [Chapter 24 — Hardware Crypto Accelerators: Taxonomy](#chapter-24--hardware-crypto-accelerators-taxonomy)
+  - [Chapter 25 — AES-NI and ARM Crypto Extensions](#chapter-25--aes-ni-and-arm-crypto-extensions)
+  - [Chapter 26 — DMA-Coupled Crypto Engines](#chapter-26--dma-coupled-crypto-engines)
+  - [Chapter 27 — True Random Number Generators on Silicon](#chapter-27--true-random-number-generators-on-silicon)
+  - [Chapter 28 — Secure Elements and Hardware Security Modules](#chapter-28--secure-elements-and-hardware-security-modules)
+- [Part VI — Side-Channel Attacks](#part-vi--side-channel-attacks)
+  - [Chapter 29 — The Side Channel: What It Is and Why It Exists](#chapter-29--the-side-channel-what-it-is-and-why-it-exists)
+  - [Chapter 30 — Power Analysis: SPA and DPA](#chapter-30--power-analysis-spa-and-dpa)
+  - [Chapter 31 — Timing Attacks](#chapter-31--timing-attacks)
+  - [Chapter 32 — Fault Injection](#chapter-32--fault-injection)
+  - [Chapter 33 — Countermeasures: Masking, Hiding, and Redundancy](#chapter-33--countermeasures-masking-hiding-and-redundancy)
+- [Part VII — Key Management](#part-vii--key-management)
+  - [Chapter 34 — The Key Hierarchy](#chapter-34--the-key-hierarchy)
+  - [Chapter 35 — Key Derivation Functions](#chapter-35--key-derivation-functions)
+  - [Chapter 36 — Key Storage on Constrained Devices](#chapter-36--key-storage-on-constrained-devices)
+  - [Chapter 37 — Key Provisioning at Manufacturing](#chapter-37--key-provisioning-at-manufacturing)
+  - [Chapter 38 — Key Rotation and Revocation](#chapter-38--key-rotation-and-revocation)
+- [Part VIII — Protocols and Composition](#part-viii--protocols-and-composition)
+  - [Chapter 39 — The Universal Secure Channel Pattern](#chapter-39--the-universal-secure-channel-pattern)
+  - [Chapter 40 — Secure Boot: The Cryptographic Chain of Trust](#chapter-40--secure-boot-the-cryptographic-chain-of-trust)
+  - [Chapter 41 — Firmware Update Security](#chapter-41--firmware-update-security)
+  - [Chapter 42 — Record Protocols: TLS 1.3 as the Reference](#chapter-42--record-protocols-tls-13-as-the-reference)
+  - [Chapter 43 — Lightweight Protocols: DTLS, OSCORE, and EDHOC](#chapter-43--lightweight-protocols-dtls-oscore-and-edhoc)
+- [Part IX — Production Realities](#part-ix--production-realities)
+  - [Chapter 44 — What Changes at Scale](#chapter-44--what-changes-at-scale)
+  - [Chapter 45 — Entropy Starvation at Boot](#chapter-45--entropy-starvation-at-boot)
+  - [Chapter 46 — Nonce Misuse and Its Consequences](#chapter-46--nonce-misuse-and-its-consequences)
+  - [Chapter 47 — Cryptographic Agility: Asset or Liability](#chapter-47--cryptographic-agility-asset-or-liability)
+  - [Chapter 48 — Compliance: FIPS 140-3, Common Criteria, and PSA Certified](#chapter-48--compliance-fips-140-3-common-criteria-and-psa-certified)
+- [Part X — Tooling and Workflow](#part-x--tooling-and-workflow)
+  - [Chapter 49 — Library Selection for Embedded Targets](#chapter-49--library-selection-for-embedded-targets)
+  - [Chapter 50 — Mbedtls in Practice](#chapter-50--mbedtls-in-practice)
+  - [Chapter 51 — WolfSSL and TinyCrypt](#chapter-51--wolfssl-and-tinycrypt)
+  - [Chapter 52 — Test Vectors and CAVP Testing](#chapter-52--test-vectors-and-cavp-testing)
+  - [Chapter 53 — Profiling Crypto on Embedded Targets](#chapter-53--profiling-crypto-on-embedded-targets)
+- [Part XI — Mastery](#part-xi--mastery)
+  - [Chapter 54 — Debugging Cryptographic Failures](#chapter-54--debugging-cryptographic-failures)
+  - [Chapter 55 — Architectural Patterns for Secure Systems](#chapter-55--architectural-patterns-for-secure-systems)
+  - [Chapter 56 — Common Errors and Their Meaning](#chapter-56--common-errors-and-their-meaning)
+  - [Chapter 57 — How to Actually Learn Embedded Cryptography](#chapter-57--how-to-actually-learn-embedded-cryptography)
+- [Appendices](#appendices)
+  - [Appendix A — Algorithm Reference](#appendix-a--algorithm-reference)
+  - [Appendix B — Mode of Operation Reference](#appendix-b--mode-of-operation-reference)
+  - [Appendix C — Crypto Cheat Sheet](#appendix-c--crypto-cheat-sheet)
+  - [Appendix D — Side-Channel Countermeasure Reference](#appendix-d--side-channel-countermeasure-reference)
+  - [Appendix E — Glossary](#appendix-e--glossary)
+
+---
+
 # Part I — Orientation
 
 ---
@@ -122,12 +207,12 @@ There are exactly five categories of symmetric cryptographic primitive. Every al
 ┌─────────────────────────────────────────────────────────────┐
 │              Five Primitive Categories                      │
 │                                                             │
-│   ┌──────────────┐   ┌──────────────┐   ┌──────────────┐    │
-│   │ Block Cipher │   │ Stream Cipher│   │     MAC      │    │
-│   │              │   │              │   │              │    │
-│   │ Fixed-size   │   │ Keystream    │   │ Auth tag     │    │
-│   │ permutation  │   │ generator    │   │ only         │    │
-│   └──────────────┘   └──────────────┘   └──────────────┘    │
+│   ┌──────────────┐   ┌──────────────┐   ┌──────────────┐   │
+│   │ Block Cipher │   │ Stream Cipher│   │     MAC      │   │
+│   │              │   │              │   │              │   │
+│   │ Fixed-size   │   │ Keystream    │   │ Auth tag     │   │
+│   │ permutation  │   │ generator    │   │ only         │   │
+│   └──────────────┘   └──────────────┘   └──────────────┘   │
 │                                                             │
 │   ┌──────────────┐   ┌──────────────┐                       │
 │   │     AEAD     │   │     KDF      │                       │
@@ -217,7 +302,7 @@ A block cipher is a keyed permutation on a fixed-size input. Memorize this defin
 │   ┌───────────────────────────────┐                      │
 │   │          AES / Block Cipher   │ ← Key (128/192/256b) │
 │   │                               │                      │
-│   │   Round 1 ─► Round 2 ─► ...   │                      │
+│   │   Round 1 ─► Round 2 ─► ...  │                       │
 │   │         ─► Round N            │                      │
 │   └───────────────────────────────┘                      │
 │         │                                                │
@@ -248,10 +333,10 @@ A stream cipher generates a pseudorandom keystream from a key and a nonce (numbe
    Key ─────┐
             ▼
    Nonce ──► [Stream Cipher] ──► Keystream: k₀ k₁ k₂ k₃ ...
-                                               │
-   Plaintext: p₀ p₁ p₂ p₃ ...                  │
-         XOR ─────────────────────────────────►│
-                                               ▼
+                                                │
+   Plaintext: p₀ p₁ p₂ p₃ ...                   │
+         XOR ─────────────────────────────────► │
+                                                ▼
    Ciphertext: c₀ c₁ c₂ c₃ ...
 ```
 
@@ -315,21 +400,21 @@ AEAD is the correct default for embedded systems. It delivers both confidentiali
 ┌─────────────────────────────────────────────────────────────┐
 │                    AEAD Encryption                          │
 │                                                             │
-│   Key K ───────────────────────────────────────────────┐    │
-│   Nonce N ─────────────────────────────────────────┐   │    │
-│   Associated Data (AD) ────────────────────────┐   │   │    │
-│   Plaintext P ─────────────────────────────┐   │   │   │    │
-│                                            ▼   ▼   ▼   ▼    │
-│                                    ┌───────────────────┐    │
-│                                    │   AEAD Encrypt    │    │
-│                                    └───────────────────┘    │
-│                                            │                │
-│                                  ┌─────────┴──────────┐     │
-│                              Ciphertext C          Tag T    │
+│   Key K ───────────────────────────────────────────────┐   │
+│   Nonce N ─────────────────────────────────────────┐   │   │
+│   Associated Data (AD) ────────────────────────┐   │   │   │
+│   Plaintext P ─────────────────────────────┐   │   │   │   │
+│                                            ▼   ▼   ▼   ▼   │
+│                                    ┌───────────────────┐   │
+│                                    │   AEAD Encrypt    │   │
+│                                    └───────────────────┘   │
+│                                            │               │
+│                                  ┌─────────┴──────────┐   │
+│                              Ciphertext C          Tag T   │
 │                                                             │
-│   AD is authenticated but NOT encrypted.                    │
-│   C is encrypted and authenticated.                         │
-│   T authenticates both C and AD.                            │
+│   AD is authenticated but NOT encrypted.                   │
+│   C is encrypted and authenticated.                        │
+│   T authenticates both C and AD.                           │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -409,7 +494,7 @@ This is the comparison that trips up architects who have not internalized the op
 │ nearly everywhere        │                                   │
 ├──────────────────────────┼───────────────────────────────────┤
 │ Best for: targets with   │ Best for: software-only targets,  │
-│ hardware AES             │ IoT without AES HW                │
+│ hardware AES             │ IoT without AES HW               │
 └──────────────────────────┴───────────────────────────────────┘
 ```
 
@@ -436,7 +521,7 @@ This chapter exists because this conflation has caused more real-world vulnerabi
 │         Three Compositions (and Which to Use)                │
 │                                                              │
 │  Encrypt-then-MAC:                                           │
-│  P ──►[Encrypt]──► C ──►[MAC]──► T          ✓ CORRECT        │
+│  P ──►[Encrypt]──► C ──►[MAC]──► T          ✓ CORRECT       │
 │                    └──────────────────────────────────┘      │
 │                    MAC over ciphertext                       │
 │                                                              │
@@ -510,18 +595,18 @@ A nonce (number used once) or IV (initialization vector) is a per-operation valu
 │                 Nonce Failure Consequences                   │
 │                                                              │
 │  AES-GCM nonce repeat:                                       │
-│  C₁ = Enc(K, N, P₁)   C₂ = Enc(K, N, P₂)                     │
-│  C₁ XOR C₂ = P₁ XOR P₂  (keystream cancels)                  │
+│  C₁ = Enc(K, N, P₁)   C₂ = Enc(K, N, P₂)                   │
+│  C₁ XOR C₂ = P₁ XOR P₂  (keystream cancels)                 │
 │  PLUS: authentication key H is recovered from the tags       │
 │  RESULT: full key compromise possible                        │
 │                                                              │
 │  AES-CBC IV repeat:                                          │
-│  C₁ = Enc(K, IV, P₁)  C₂ = Enc(K, IV, P₂)                    │
-│  RESULT: first block comparison reveals P₁[0] XOR P₂[0]      │
+│  C₁ = Enc(K, IV, P₁)  C₂ = Enc(K, IV, P₂)                  │
+│  RESULT: first block comparison reveals P₁[0] XOR P₂[0]     │
 │  (weaker than CTR/GCM but still a confidentiality break)     │
 │                                                              │
 │  AES-SIV nonce repeat:                                       │
-│  RESULT: reveals P₁ == P₂ only. Confidentiality preserved.   │
+│  RESULT: reveals P₁ == P₂ only. Confidentiality preserved.  │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -557,10 +642,10 @@ A block cipher encrypts exactly one block. Modes of operation are the mechanisms
 ┌──────────────────────────────────────────────────────────────┐
 │              Mode of Operation: Concept                      │
 │                                                              │
-│   Block cipher B: 128-bit → 128-bit keyed permutation        │
-│   Mode M: extends B to handle messages of any length         │
+│   Block cipher B: 128-bit → 128-bit keyed permutation       │
+│   Mode M: extends B to handle messages of any length        │
 │                                                              │
-│   AES + Mode = a usable encryption/authentication scheme     │
+│   AES + Mode = a usable encryption/authentication scheme    │
 │                                                              │
 │   The block cipher is a primitive.                           │
 │   The mode of operation is the design.                       │
@@ -646,7 +731,7 @@ GCM combines AES-CTR for encryption with GHASH for authentication. GHASH is a po
 │   Nonce/IV (96 bits)                                        │
 │         │                                                   │
 │    ┌────┴─────┐      ┌──────────┐      ┌──────────┐         │
-│    │ Nonce||1 │─►AES►│ E(K,Y₀)  │      │  GHASH   │         │
+│    │ Nonce||1 │─►AES►│ E(K,Y₀) │      │  GHASH   │         │
 │    └──────────┘      └────┬─────┘      └────┬─────┘         │
 │                           │  Auth tag       │               │
 │    ┌──────────┐      ┌────┴─────┐           │               │
@@ -948,23 +1033,23 @@ Hardware crypto accelerators are silicon blocks that perform cryptographic opera
 ┌─────────────────────────────────────────────────────────────┐
 │          Hardware Crypto Accelerator Taxonomy               │
 │                                                             │
-│  ┌─────────────────────────────────────────────────────┐   │
-│  │               SoC / Microcontroller                  │   │
-│  │                                                      │   │
-│  │  ┌──────────┐  ┌──────────┐  ┌────────────────────┐ │   │
-│  │  │   CPU    │  │  AES     │  │   SHA / HMAC       │ │   │
-│  │  │ Core(s)  │  │  Engine  │  │   Accelerator      │ │   │
-│  │  └──────────┘  └──────────┘  └────────────────────┘ │   │
-│  │                                                      │   │
-│  │  ┌──────────┐  ┌──────────┐  ┌────────────────────┐ │   │
-│  │  │  TRNG    │  │  PKA     │  │   Secure Storage   │ │   │
-│  │  │          │  │ (ECC/RSA)│  │   (OTP/eFuse)      │ │   │
-│  │  └──────────┘  └──────────┘  └────────────────────┘ │   │
-│  │                                                      │   │
-│  │  ┌──────────────────────────────────────────────┐   │   │
-│  │  │              DMA Engine                       │   │   │
-│  │  └──────────────────────────────────────────────┘   │   │
-│  └─────────────────────────────────────────────────────┘   │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │               SoC / Microcontroller                 │    │
+│  │                                                     │    │
+│  │  ┌──────────┐  ┌──────────┐  ┌────────────────────┐ │    │
+│  │  │   CPU    │  │  AES     │  │   SHA / HMAC       │ │    │
+│  │  │ Core(s)  │  │  Engine  │  │   Accelerator      │ │    │
+│  │  └──────────┘  └──────────┘  └────────────────────┘ │    │
+│  │                                                     │    │
+│  │  ┌──────────┐  ┌──────────┐  ┌────────────────────┐ │    │
+│  │  │  TRNG    │  │  PKA     │  │   Secure Storage   │ │    │
+│  │  │          │  │ (ECC/RSA)│  │   (OTP/eFuse)      │ │    │
+│  │  └──────────┘  └──────────┘  └────────────────────┘ │    │
+│  │                                                     │    │
+│  │  ┌──────────────────────────────────────────────┐   │    │
+│  │  │              DMA Engine                      │   │    │
+│  │  └──────────────────────────────────────────────┘   │    │
+│  └─────────────────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────────────┘
 ```
 

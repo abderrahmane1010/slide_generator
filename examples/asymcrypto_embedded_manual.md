@@ -34,17 +34,14 @@ Each chapter teaches one thing. Read once for orientation; return to chapters as
 
 ## Table of Contents
 
-- [Asymmetric Cryptography for Embedded Devices](#asymmetric-cryptography-for-embedded-devices)
-    - [A First-Principles Manual for the Cyber Embedded Architect](#a-first-principles-manual-for-the-cyber-embedded-architect)
-  - [Preface](#preface)
-  - [Table of Contents](#table-of-contents)
-- [Part I — Orientation](#part-i--orientation)
+- [Preface](#preface)
+- **Part I — Orientation**
   - [Chapter 1 — The Duality: Public Knowledge vs Secret Capability](#chapter-1--the-duality-public-knowledge-vs-secret-capability)
   - [Chapter 2 — What Asymmetric Crypto Provides (and Does Not)](#chapter-2--what-asymmetric-crypto-provides-and-does-not)
   - [Chapter 3 — The Three Doors: Primitive Categories](#chapter-3--the-three-doors-primitive-categories)
   - [Chapter 4 — The Embedded Cost Model](#chapter-4--the-embedded-cost-model)
   - [Chapter 5 — Asymmetric vs Symmetric: Roles, Not Rivals](#chapter-5--asymmetric-vs-symmetric-roles-not-rivals)
-- [Part II — Anatomy](#part-ii--anatomy)
+- **Part II — Anatomy**
   - [Chapter 6 — Key Pairs: Public and Private](#chapter-6--key-pairs-public-and-private)
   - [Chapter 7 — Digital Signatures](#chapter-7--digital-signatures)
   - [Chapter 8 — Key Agreement](#chapter-8--key-agreement)
@@ -52,14 +49,14 @@ Each chapter teaches one thing. Read once for orientation; return to chapters as
   - [Chapter 10 — Certificates and Binding](#chapter-10--certificates-and-binding)
   - [Chapter 11 — Signature vs Encryption: The Dangerous Inversion](#chapter-11--signature-vs-encryption-the-dangerous-inversion)
   - [Chapter 12 — Authentication vs Authorization](#chapter-12--authentication-vs-authorization)
-- [Part III — Configuration and Composition](#part-iii--configuration-and-composition)
+- **Part III — Configuration and Composition**
   - [Chapter 13 — Key Sizes and Security Levels](#chapter-13--key-sizes-and-security-levels)
   - [Chapter 14 — Key Generation: Randomness and Curve Selection](#chapter-14--key-generation-randomness-and-curve-selection)
   - [Chapter 15 — Certificate Structure and Fields](#chapter-15--certificate-structure-and-fields)
   - [Chapter 16 — Certificate Chains and Trust Anchors](#chapter-16--certificate-chains-and-trust-anchors)
   - [Chapter 17 — Key Lifetimes and Certificate Validity](#chapter-17--key-lifetimes-and-certificate-validity)
   - [Chapter 18 — Algorithm Identifiers and OIDs](#chapter-18--algorithm-identifiers-and-oids)
-- [Part IV — Mathematical Internals](#part-iv--mathematical-internals)
+- **Part IV — Mathematical Internals**
   - [Chapter 19 — Groups, Hardness, and the Discrete Log Problem](#chapter-19--groups-hardness-and-the-discrete-log-problem)
   - [Chapter 20 — Elliptic Curves: The Geometry](#chapter-20--elliptic-curves-the-geometry)
   - [Chapter 21 — Elliptic Curve Arithmetic: Point Addition](#chapter-21--elliptic-curve-arithmetic-point-addition)
@@ -67,50 +64,50 @@ Each chapter teaches one thing. Read once for orientation; return to chapters as
   - [Chapter 23 — RSA: Factoring and the Trapdoor](#chapter-23--rsa-factoring-and-the-trapdoor)
   - [Chapter 24 — Lattices and Post-Quantum Security](#chapter-24--lattices-and-post-quantum-security)
   - [Chapter 25 — Why Key Sizes Differ Across Algorithm Families](#chapter-25--why-key-sizes-differ-across-algorithm-families)
-- [Part V — Elliptic Curve Cryptography in Practice](#part-v--elliptic-curve-cryptography-in-practice)
+- **Part V — Elliptic Curve Cryptography in Practice**
   - [Chapter 26 — Curve Taxonomy: NIST, Brainpool, and Bernstein Curves](#chapter-26--curve-taxonomy-nist-brainpool-and-bernstein-curves)
   - [Chapter 27 — P-256 vs X25519: The Architectural Choice](#chapter-27--p-256-vs-x25519-the-architectural-choice)
   - [Chapter 28 — Hardware ECC Accelerators](#chapter-28--hardware-ecc-accelerators)
   - [Chapter 29 — Coordinate Systems and Montgomery Arithmetic](#chapter-29--coordinate-systems-and-montgomery-arithmetic)
   - [Chapter 30 — ECC Side-Channel Attacks and Countermeasures](#chapter-30--ecc-side-channel-attacks-and-countermeasures)
-- [Part VI — Digital Signatures for Embedded Systems](#part-vi--digital-signatures-for-embedded-systems)
+- **Part VI — Digital Signatures for Embedded Systems**
   - [Chapter 31 — ECDSA: Structure and Failure Modes](#chapter-31--ecdsa-structure-and-failure-modes)
   - [Chapter 32 — EdDSA and Ed25519: The Modern Signature](#chapter-32--eddsa-and-ed25519-the-modern-signature)
   - [Chapter 33 — RSA-PSS: When RSA Is Required](#chapter-33--rsa-pss-when-rsa-is-required)
   - [Chapter 34 — ECDSA vs EdDSA: The Decision](#chapter-34--ecdsa-vs-eddsa-the-decision)
   - [Chapter 35 — Signature Verification in Secure Boot](#chapter-35--signature-verification-in-secure-boot)
   - [Chapter 36 — Hash-then-Sign and the Role of the Hash Function](#chapter-36--hash-then-sign-and-the-role-of-the-hash-function)
-- [Part VII — Key Agreement and Key Encapsulation](#part-vii--key-agreement-and-key-encapsulation)
+- **Part VII — Key Agreement and Key Encapsulation**
   - [Chapter 37 — ECDH: The Fundamental Construction](#chapter-37--ecdh-the-fundamental-construction)
   - [Chapter 38 — X25519: The Clean Curve for Key Agreement](#chapter-38--x25519-the-clean-curve-for-key-agreement)
   - [Chapter 39 — Forward Secrecy and Ephemeral Keys](#chapter-39--forward-secrecy-and-ephemeral-keys)
   - [Chapter 40 — Static vs Ephemeral: The Tradeoff](#chapter-40--static-vs-ephemeral-the-tradeoff)
   - [Chapter 41 — Post-Quantum KEM: Kyber / ML-KEM](#chapter-41--post-quantum-kem-kyber--ml-kem)
   - [Chapter 42 — Hybrid Key Exchange](#chapter-42--hybrid-key-exchange)
-- [Part VIII — PKI for Embedded Fleets](#part-viii--pki-for-embedded-fleets)
+- **Part VIII — PKI for Embedded Fleets**
   - [Chapter 43 — The PKI Hierarchy for IoT](#chapter-43--the-pki-hierarchy-for-iot)
   - [Chapter 44 — Device Identity Certificates](#chapter-44--device-identity-certificates)
   - [Chapter 45 — Certificate Provisioning at Manufacturing](#chapter-45--certificate-provisioning-at-manufacturing)
   - [Chapter 46 — Certificate Revocation on Constrained Devices](#chapter-46--certificate-revocation-on-constrained-devices)
   - [Chapter 47 — Attestation: Proving Device Identity Without a Certificate Authority](#chapter-47--attestation-proving-device-identity-without-a-certificate-authority)
-- [Part IX — Production Realities](#part-ix--production-realities)
+- **Part IX — Production Realities**
   - [Chapter 48 — Performance Budget for Asymmetric Operations](#chapter-48--performance-budget-for-asymmetric-operations)
   - [Chapter 49 — Memory Layout for Asymmetric Crypto](#chapter-49--memory-layout-for-asymmetric-crypto)
   - [Chapter 50 — Nonce and Randomness Failures in Asymmetric Crypto](#chapter-50--nonce-and-randomness-failures-in-asymmetric-crypto)
   - [Chapter 51 — Clock and Time: The Silent Dependency](#chapter-51--clock-and-time-the-silent-dependency)
   - [Chapter 52 — Post-Quantum Migration Planning](#chapter-52--post-quantum-migration-planning)
-- [Part X — Tooling and Workflow](#part-x--tooling-and-workflow)
+- **Part X — Tooling and Workflow**
   - [Chapter 53 — Library Selection for Embedded Targets](#chapter-53--library-selection-for-embedded-targets)
   - [Chapter 54 — Mbed TLS PSA API for Asymmetric Operations](#chapter-54--mbed-tls-psa-api-for-asymmetric-operations)
   - [Chapter 55 — WolfSSL Asymmetric Operations](#chapter-55--wolfssl-asymmetric-operations)
   - [Chapter 56 — Test Vectors and CAVP for Asymmetric Algorithms](#chapter-56--test-vectors-and-cavp-for-asymmetric-algorithms)
   - [Chapter 57 — Profiling Asymmetric Operations on Embedded Targets](#chapter-57--profiling-asymmetric-operations-on-embedded-targets)
-- [Part XI — Mastery](#part-xi--mastery)
+- **Part XI — Mastery**
   - [Chapter 58 — Debugging Asymmetric Crypto Failures](#chapter-58--debugging-asymmetric-crypto-failures)
   - [Chapter 59 — Architectural Patterns for Asymmetric Crypto in Embedded Systems](#chapter-59--architectural-patterns-for-asymmetric-crypto-in-embedded-systems)
   - [Chapter 60 — Common Errors and Their Meaning](#chapter-60--common-errors-and-their-meaning)
   - [Chapter 61 — How to Actually Learn Embedded Asymmetric Cryptography](#chapter-61--how-to-actually-learn-embedded-asymmetric-cryptography)
-- [Appendices](#appendices)
+- **Appendices**
   - [Appendix A — Algorithm and Key Size Reference](#appendix-a--algorithm-and-key-size-reference)
   - [Appendix B — Operation Performance Reference](#appendix-b--operation-performance-reference)
   - [Appendix C — ASN.1 / DER / PEM Cheat Sheet](#appendix-c--asn1--der--pem-cheat-sheet)
@@ -207,20 +204,20 @@ There are exactly three categories of asymmetric cryptographic primitive. Every 
 ┌────────────────────────────────────────────────────────────────┐
 │              Three Asymmetric Primitive Categories             │
 │                                                                │
-│  ┌───────────────┐  ┌───────────────┐  ┌───────────────────┐   │
-│  │   SIGNATURE   │  │ KEY AGREEMENT │  │  KEY ENCRYPTION   │   │
-│  │               │  │               │  │  (KEM/PKE)        │   │
-│  │ Private: sign │  │ Both parties  │  │ Public: encrypt   │   │
-│  │ Public: verify│  │ contribute to │  │ Private: decrypt  │   │
-│  │               │  │ shared secret │  │                   │   │
-│  │ ECDSA, EdDSA  │  │ ECDH, X25519  │  │ RSA-OAEP, Kyber   │   │
-│  │ RSA-PSS       │  │ ECDHE in TLS  │  │                   │   │
-│  └───────────────┘  └───────────────┘  └───────────────────┘   │
+│  ┌───────────────┐  ┌───────────────┐  ┌───────────────────┐  │
+│  │   SIGNATURE   │  │ KEY AGREEMENT │  │  KEY ENCRYPTION   │  │
+│  │               │  │               │  │  (KEM/PKE)        │  │
+│  │ Private: sign │  │ Both parties  │  │ Public: encrypt   │  │
+│  │ Public: verify│  │ contribute to │  │ Private: decrypt  │  │
+│  │               │  │ shared secret │  │                   │  │
+│  │ ECDSA, EdDSA  │  │ ECDH, X25519  │  │ RSA-OAEP, Kyber  │  │
+│  │ RSA-PSS       │  │ ECDHE in TLS  │  │                   │  │
+│  └───────────────┘  └───────────────┘  └───────────────────┘  │
 │                                                                │
 │  Outputs:                                                      │
-│  Signature → verification result (accept/reject)               │
-│  Key agreement → shared secret (both parties derive same key)  │
-│  KEM/PKE → ciphertext (decryptable only by private key owner)  │
+│  Signature → verification result (accept/reject)              │
+│  Key agreement → shared secret (both parties derive same key) │
+│  KEM/PKE → ciphertext (decryptable only by private key owner) │
 └────────────────────────────────────────────────────────────────┘
 ```
 
